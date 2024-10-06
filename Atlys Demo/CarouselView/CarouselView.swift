@@ -96,8 +96,8 @@ final class CarouselView: UIView, UIScrollViewDelegate {
         }
     }
     
-    func centerHorizontally() {
-        let xContentOffset = (scrollView.contentSize.width / 2) - (scrollView.bounds.size.width / 2)
+    func scrollTo(page: Int) {
+        let xContentOffset = (scrollView.frame.width * imageWidthPercentage * CGFloat(page)) - (imageSpacing * CGFloat(page))
         scrollView.contentOffset = CGPoint(x: xContentOffset, y: scrollView.contentOffset.y)
         zoomInCenterImage()
     }

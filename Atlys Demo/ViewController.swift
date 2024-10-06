@@ -32,6 +32,6 @@ final class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.carouselView.centerHorizontally()
+        self.carouselView.scrollTo(page: 1)
     }
 }
